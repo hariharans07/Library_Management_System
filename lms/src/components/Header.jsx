@@ -19,11 +19,13 @@ const Header = () => {
         </button>
 
         <nav className={`header-nav ${isMenuOpen ? 'active' : ''}`}>
-          <a href="/" className="nav-link">Home</a>
+          <a href="/" className="nav-link">Dashboard</a>
           <a href="/books" className="nav-link">Books</a>
-          <a href="/members" className="nav-link">Members</a>
-          <a href="/loans" className="nav-link">Loans</a>
-          <a href="/about" className="nav-link">About</a>
+          <a href="/users" className="nav-link">Users</a>
+          <a href="/issues" className="nav-link">Issues & Returns</a>
+          <a href="/reservations" className="nav-link">Reservations</a>
+          <a href="/fines" className="nav-link">Fines</a>
+          <a href="/profile" className="nav-link">Profile</a>
         </nav>
       </div>
     </header>
