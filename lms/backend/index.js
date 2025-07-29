@@ -1,28 +1,52 @@
-let express = require("express");
-let cors = require("cors");
-let mysql2 = require("mysql2");
-let port = 5000;
-let app = express();
-app.use(cors());
-let db = mysql2.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "mkce",
-});
-db.connect((err) => {
-  if (err) throw err;
-  console.log("Connected to database");
-});
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+let express =require('express')
+let mysql2=require('mysql2')
+let cors=require('cors')
 
-app.get("/start", (req, res) => {
-  let sql = "SELECT * FROM cse";
-  db.query(sql, (err, result) => {
-    if (err) throw err;
-    res.json(result);
+ let app=express()
+ let port=8000
+
+ app.use(cors())
+
+
+ let db= mysql2.createConnection({
+    host:'localhost',
+    port:'3306',
+    user:'root',
+    password:'root',
+    database:'mkce'
   });
-});
+
+
+  db.connect((err)=>{
+
+    if(err){
+        console.log('Not successfull')
+    }else{
+        console.log('Successfully Connected')
+    }
+  })
+
+
+  app.get('/students',(req,res)=>{
+
+    db.query("select * from cse",(err,result)=>{
+      if(err){
+       
+         res.json(err)
+      }else{
+            
+        res.json(result);
+
+      }
+    })
+
+
+  })
+
+
+ app.listen(port,()=>{    
+
+    console.log('Server setup is successfull...')
+
+ })
