@@ -18,3 +18,11 @@ db.connect((err) => {
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+app.get("/start", (req, res) => {
+  let sql = "SELECT * FROM cse";
+  db.query(sql, (err, result) => {
+    if (err) throw err;
+    res.json(result);
+  });
+});
