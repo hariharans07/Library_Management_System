@@ -29,9 +29,9 @@ const Table = () => {
         <tbody>
           {list.map((data) => (
             <tr>
-              <td>{data.regNo}</td>
-              <td>{data.Sname}</td>
-              <td>{data.deptNo}</td>
+              <td>{data.regno}</td>
+              <td>{data.name}</td>
+              <td>{data.dob}</td>
             </tr>
           ))}
         </tbody>
