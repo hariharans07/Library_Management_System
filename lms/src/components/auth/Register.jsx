@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const Register = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    role: 'student', // Default role
+    name: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "student", // Default role
   });
 
   const handleChange = (e) => {
@@ -19,7 +19,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO: Implement registration logic
-    console.log('Registration attempt:', formData);
+    console.log("Registration attempt:", formData);
   };
 
   return (

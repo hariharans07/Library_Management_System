@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const AdminDashboard = () => {
   const [stats, setStats] = useState({
@@ -9,10 +9,10 @@ const AdminDashboard = () => {
     recentActivities: [
       {
         id: 1,
-        type: 'ISSUE',
-        book: 'The Great Gatsby',
-        user: 'John Doe',
-        date: '2025-07-28',
+        type: "ISSUE",
+        book: "The Great Gatsby",
+        user: "John Doe",
+        date: "2025-07-28",
       },
       // Add more activities
     ],
@@ -21,7 +21,7 @@ const AdminDashboard = () => {
   return (
     <div className="admin-dashboard">
       <h2>Admin Dashboard</h2>
-      
+
       <div className="stats-grid">
         <div className="stat-card">
           <h3>Total Books</h3>

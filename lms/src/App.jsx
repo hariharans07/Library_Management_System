@@ -1,13 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Login from './components/auth/Login';
-import Register from './components/auth/Register';
-import BookList from './components/books/BookList';
-import BookForm from './components/books/BookForm';
-import AdminDashboard from './components/dashboard/AdminDashboard';
-import UserDashboard from './components/dashboard/UserDashboard';
-import './App.css';
-import './components/styles.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Login from "./components/auth/Login";
+import Register from "./components/auth/Register";
+import BookList from "./components/books/BookList";
+import BookForm from "./components/books/BookForm";
+import AdminDashboard from "./components/dashboard/AdminDashboard";
+import UserDashboard from "./components/dashboard/UserDashboard";
+import "./App.css";
+import "./components/styles.css";
 
 function App() {
   return (

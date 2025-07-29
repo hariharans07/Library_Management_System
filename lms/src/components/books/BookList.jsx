@@ -1,23 +1,23 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const BookList = () => {
   const [books, setBooks] = useState([
     {
       id: 1,
-      title: 'The Great Gatsby',
-      author: 'F. Scott Fitzgerald',
-      isbn: '9780743273565',
-      category: 'Fiction',
+      title: "The Great Gatsby",
+      author: "F. Scott Fitzgerald",
+      isbn: "9780743273565",
+      category: "Fiction",
       available: true,
-      imageUrl: 'https://example.com/great-gatsby.jpg',
+      imageUrl: "https://example.com/great-gatsby.jpg",
     },
     // Add more sample books
   ]);
 
   const [filters, setFilters] = useState({
-    search: '',
-    category: '',
-    availability: 'all',
+    search: "",
+    category: "",
+    availability: "all",
   });
 
   const handleFilterChange = (e) => {
@@ -28,14 +28,17 @@ const BookList = () => {
   };
 
   const filteredBooks = books.filter((book) => {
-    const matchesSearch = book.title.toLowerCase().includes(filters.search.toLowerCase()) ||
+    const matchesSearch =
+      book.title.toLowerCase().includes(filters.search.toLowerCase()) ||
       book.author.toLowerCase().includes(filters.search.toLowerCase()) ||
       book.isbn.includes(filters.search);
-    
-    const matchesCategory = !filters.category || book.category === filters.category;
-    const matchesAvailability = filters.availability === 'all' || 
-      (filters.availability === 'available' && book.available) ||
-      (filters.availability === 'unavailable' && !book.available);
+
+    const matchesCategory =
+      !filters.category || book.category === filters.category;
+    const matchesAvailability =
+      filters.availability === "all" ||
+      (filters.availability === "available" && book.available) ||
+      (filters.availability === "unavailable" && !book.available);
 
     return matchesSearch && matchesCategory && matchesAvailability;
   });
@@ -83,15 +86,21 @@ const BookList = () => {
               <h3>{book.title}</h3>
               <p>by {book.author}</p>
               <p>ISBN: {book.isbn}</p>
-              <p className={`availability ${book.available ? 'available' : 'unavailable'}`}>
-                {book.available ? 'Available' : 'Not Available'}
+              <p
+                className={`availability ${
+                  book.available ? "available" : "unavailable"
+                }`}
+              >
+                {book.available ? "Available" : "Not Available"}
               </p>
               <div className="book-actions">
-                <button 
-                  className={`btn ${book.available ? 'btn-primary' : 'btn-secondary'}`}
+                <button
+                  className={`btn ${
+                    book.available ? "btn-primary" : "btn-secondary"
+                  }`}
                   disabled={!book.available}
                 >
-                  {book.available ? 'Borrow' : 'Reserve'}
+                  {book.available ? "Borrow" : "Reserve"}
                 </button>
                 <button className="btn btn-info">Details</button>
               </div>

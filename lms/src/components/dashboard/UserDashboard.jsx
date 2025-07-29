@@ -1,13 +1,13 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const UserDashboard = () => {
   const [userData, setUserData] = useState({
     currentBooks: [
       {
         id: 1,
-        title: 'The Great Gatsby',
-        issueDate: '2025-07-15',
-        dueDate: '2025-07-29',
+        title: "The Great Gatsby",
+        issueDate: "2025-07-15",
+        dueDate: "2025-07-29",
         fine: 0,
       },
       // Add more books
@@ -15,18 +15,18 @@ const UserDashboard = () => {
     reservations: [
       {
         id: 1,
-        title: 'To Kill a Mockingbird',
-        reservationDate: '2025-07-28',
-        status: 'Waiting',
+        title: "To Kill a Mockingbird",
+        reservationDate: "2025-07-28",
+        status: "Waiting",
       },
     ],
     fineHistory: [
       {
         id: 1,
-        book: 'Pride and Prejudice',
+        book: "Pride and Prejudice",
         amount: 50,
-        date: '2025-07-20',
-        status: 'Paid',
+        date: "2025-07-20",
+        status: "Paid",
       },
     ],
   });

@@ -1,17 +1,17 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const BookForm = ({ book, onSubmit }) => {
   const [formData, setFormData] = useState(
     book || {
-      title: '',
-      author: '',
-      isbn: '',
-      category: '',
-      publisher: '',
-      edition: '',
-      description: '',
+      title: "",
+      author: "",
+      isbn: "",
+      category: "",
+      publisher: "",
+      edition: "",
+      description: "",
       copies: 1,
-      imageUrl: '',
+      imageUrl: "",
     }
   );
 
@@ -145,7 +145,7 @@ const BookForm = ({ book, onSubmit }) => {
       </div>
 
       <button type="submit" className="btn-primary">
-        {book ? 'Update Book' : 'Add Book'}
+        {book ? "Update Book" : "Add Book"}
       </button>
     </form>
   );
